@@ -1,0 +1,15 @@
+<div>
+  <h3>{{topic_data.title}}</h3>
+  <p>{{topic_data.create_at}}</p>
+  <span class="topic-content" [innerHtml]="topic_data.content"></span><br>
+
+  <div *ngIf="topic_data.replies && topic_data.replies.length > 0 ">
+    <hr>
+    <h3>回复</h3>
+    <ul>
+      <li *ngFor="let rp of topic_data.replies">
+         <span [innerHtml]="rp.content"></span>
+      </li>
+    </ul>
+  </div>
+</div>

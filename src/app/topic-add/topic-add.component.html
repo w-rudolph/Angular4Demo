@@ -1,0 +1,15 @@
+<div class="container">
+  <p>create new Topic:</p>
+ 
+  <p><label>title: </label><br><input [(ngModel)] = "topic.title" /></p>
+  <p><label>content: </label><br><textarea [(ngModel)] = "topic.content" cols="30" rows="10"></textarea></p>
+  <p><label>tab: </label><br>
+      <select [(ngModel)] = "topic.tab">
+          <option value="dev">dev</option>
+          <option value="ask" disabled>ask</option>
+          <option value="share" disabled>share</option>
+          <option value="job" disabled>job</option>
+      </select>
+  </p>
+  <button (click)="handleSubmit()">Submit</button>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div><img class="avatar_img" [src]="user.avatar_url"> <span>{{ user.loginname }}</span></div>
+            <hr>
+            filter: 
+            <select [(ngModel)]="filter.tab" (change)="handleTabChange()">
+                <option value="">全部</option>
+                <option value="good">精华</option>
+                <option value="share">分享</option>
+                <option value="ask">问答</option>
+                <option value="job">招聘</option>
+                <option value="dev">客户端测试</option>
+            </select>
+            <hr>
+            <ul>
+                <li *ngFor="let item of data_list" class="topic-item">
+                     <a routerLink="/topic/{{item.id}}">{{item.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
