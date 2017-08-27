@@ -41,6 +41,3 @@ yarn-error.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# ignore token config
-/src/consts/cnode_token
